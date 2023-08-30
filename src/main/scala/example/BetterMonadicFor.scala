@@ -9,6 +9,7 @@ class IO[A](io: => A) {
 object BetterMonadicFor {
   def countTwice(count: => Int): IO[String] =
     for {
-      (x, y) <- new IO(count).twice
+      tuple <- new IO(count).twice
+      (x, y) = tuple
     } yield s"$x and $y"
 }
