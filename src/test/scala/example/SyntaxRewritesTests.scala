@@ -6,6 +6,6 @@ class SyntaxRewritesTests extends munit.FunSuite {
   }
 
   test("auto-application") {
-    assertEquals(SyntaxRewrites.message(), "Hello")
+    assertEquals(SyntaxRewrites.message, "Hello")
   }
 }

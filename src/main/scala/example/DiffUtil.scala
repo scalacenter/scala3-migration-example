@@ -9,8 +9,8 @@ object DiffUtil {
     .showInlineDiffs(true)
     .mergeOriginalRevised(true)
     .inlineDiffByWord(true)
-    .oldTag(f => "-")
-    .newTag(f => "+")
+    .oldTag(_ => "-")
+    .newTag(_ => "+")
     .build
 
   def diff(original: String, revised: String): String =
