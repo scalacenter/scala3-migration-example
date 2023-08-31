@@ -23,5 +23,7 @@ lazy val main = project
     addCompilerPlugin(("org.typelevel" %% "kind-projector" % "0.13.2").cross(CrossVersion.full)),
     addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1"),
     buildInfoKeys += BuildInfoKey(scalacOptions),
-    buildInfoPackage := "example"
+    buildInfoPackage := "example",
+    Test / testOptions += Tests.Argument(TestFrameworks.MUnit, "+l"),
+    Test / parallelExecution := false
   )
